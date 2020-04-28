@@ -53,7 +53,7 @@ function drawG() {
   const volume = document.querySelectorAll(`.volume`);
   const context = new (window.AudioContext || window.webkitAudioContext)();
 
-  const transfer = context.createChannelMerger(4);
+  const transfer = context.createChannelMerger(1);
   transfer.connect(context.destination);
 
   document.querySelectorAll('.video').forEach((videoSource) => {
